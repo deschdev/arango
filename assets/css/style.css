@@ -57,12 +57,63 @@ img {
   background: linear-gradient(to right, #9e1227, #cd1630, #9e1227);
 }
 
+.headerContainer {
+  position: relative;
+}
+
 .headerContainer img {
   max-width: 200px;
 }
 
-.headerContainer nav {
+.headerContainer button {
+  background: none;
+  border: none;
+}
+
+/* .headerContainer nav {
   display: none;
+} */
+
+.headerContainer nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #9e1227, #cd1630, #9e1227);
+} 
+
+.headerContainer nav .close {
+  margin-top: 10px;
+  margin-right: 20px;
+  float: right;
+  border: none;
+  background-color: transparent;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #FAFAFA;
+  cursor: pointer;
+}
+
+.headerContainer nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 4rem;
+}
+
+.headerContainer nav ul li {
+  margin: 10px 5px;
+}
+
+.headerContainer nav a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FAFAFA;
+}
+
+.headerContainer nav a:hover {
+  color: #FFD700;
 }
 
 /* MAIN */
@@ -133,7 +184,6 @@ img {
 
 .instagramContainer {
   background: linear-gradient(to right, #000070, #00008B, #000070);
-  padding: 4rem 2rem;
 }
 
 .instagramContainer h2 {
@@ -150,7 +200,8 @@ img {
 
 @media all and (min-width: 768px) {
 
-  .headerContainer .mobile {
+  .headerContainer .mobile,
+  .headerContainer nav .close {
     display: none;
   }
 
@@ -165,16 +216,6 @@ img {
 
   .headerContainer nav ul li {
     margin: 0 5px;
-  }
-
-  .headerContainer nav a {
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: #FAFAFA;
-  }
-
-  .headerContainer nav a:hover {
-    color: #FFD700;
   }
 
   .fiftyFiftyContainer {

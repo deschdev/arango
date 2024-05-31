@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Galada&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script defer src="./assets/js/app.js"></script>
   <title>Arango Cafe</title>
 </head>
 <body>
@@ -18,10 +19,11 @@
           <img width="150" src="./assets/images/logo.png" alt="logo">
         </a>
       </div>
-      <div class="mobile">
+      <button class="mobile hide" id="openMobileNav">
         <svg fill="#FAFAFA" width="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Pro 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM192 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H160c17.7 0 32 14.3 32 32z"/></svg>
-      </div>
+      </button>
       <nav>
+        <button class="close" data-mobile-close>x</button>
         <ul class="navContainer">
           <li><a href="#">MENUS</a></li>
           <li><a href="#">CAKES</a></li>
@@ -102,7 +104,7 @@
     </section>
     <section>
       <div class="instagramContainer">
-        <img src="./assets/images/mexicanflags.png" alt="mexican flags" loading="lazy" width="100%">
+        <img src="./assets/images/mexicanflags.png" alt="mexican flags" loading="lazy">
         <div>
           <h2>Follow Us On Instagram</h2>
         </div>
