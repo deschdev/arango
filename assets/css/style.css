@@ -1,0 +1,228 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 65.2%;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Galada", cursive;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.orange {
+  background: linear-gradient(to right, #cc7000, #FF8C00, #cc7000); 
+}
+
+.lime {
+  background: linear-gradient(to right, #29a629, #32CD32, #29a629);
+}
+
+.blue {
+  background: linear-gradient(to right, #000070, #00008B, #000070);
+}
+
+/* HEADER */
+
+.headerContainer,
+.footerContainer {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+
+  background: linear-gradient(to right, #9e1227, #cd1630, #9e1227);
+}
+
+.headerContainer img {
+  max-width: 200px;
+}
+
+.headerContainer nav {
+  display: none;
+}
+
+/* MAIN */
+
+.fiftyFiftyContainer .lime,
+.fiftyFiftyContainer .orange {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 40vh;
+  padding: 3rem 2rem 2rem;
+  flex: 1 50%;
+}
+
+.fiftyFiftyContainer .imageContainer {
+  flex: 1 50%;
+}
+
+.fiftyFiftyContainer .imageContainer img {
+  flex: 1 50%;
+}
+
+.fiftyFiftyContainer .content {
+  margin: 1rem 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.fiftyFiftyContainer .content h2,
+.instagramContainer h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 4.8rem;
+  font-weight: 900;
+  color: #FAFAFA;
+  text-shadow: 2px 2px #cd1630;
+}
+
+.fiftyFiftyContainer p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #FAFAFA;
+}
+
+.fiftyFiftyContainer .content a {
+  display: inline-table;
+  width: 100%;
+  max-width: 185px;
+  height: 4rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #000070, #00008B, #000070);
+  border-radius: 5px;
+  font-size: 1.44rem;
+  line-height: 1.5;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* INSTAGRAM CONTAINER */
+
+.instagramContainer {
+  background: linear-gradient(to right, #000070, #00008B, #000070);
+  padding: 4rem 2rem;
+}
+
+.instagramContainer h2 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
+/* FOOTER */
+
+.footerContainer {
+  position: static;
+}
+
+@media all and (min-width: 768px) {
+
+  .headerContainer .mobile {
+    display: none;
+  }
+
+  .headerContainer nav {
+    display: block;
+  }
+
+  .headerContainer nav ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .headerContainer nav ul li {
+    margin: 0 5px;
+  }
+
+  .headerContainer nav a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #FAFAFA;
+  }
+
+  .headerContainer nav a:hover {
+    color: #FFD700;
+  }
+
+  .fiftyFiftyContainer {
+    display: flex;
+    max-height: 40vh;
+    overflow: hidden;
+  }
+
+  .fiftyFiftyContainer.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .fiftyFiftyContainer .content h2,
+  .instagramContainer h2 {
+    font-size: 5.8rem;
+  }
+
+  .fiftyFiftyContainer p {
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .fiftyFiftyContainer .content a {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media all and (min-width: 1250px) {
+  .fiftyFiftyContainer {
+    max-height: 50vh;
+  }
+
+  .fiftyFiftyContainer .content h2,
+  .instagramContainer h2 {
+    font-size: 6.8rem;
+  }
+
+  .fiftyFiftyContainer p {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .fiftyFiftyContainer .content a {
+    padding: 2rem 4rem;
+    font-size: 2rem;
+  }
+}
