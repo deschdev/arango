@@ -1,8 +1,9 @@
-const modalOpen = document.querySelector("#openMobileNav");
+import { mobileModal } from "./mobileModal.js";
+import { showSlides } from "./slideshow.js";
 
-const toggleNav = () => {
-  const nav = document.querySelector("nav");
-    nav.classList.toggle("hide");
+const init = () => {
+  mobileModal();
+  showSlides();
 }
 
-modalOpen.addEventListener("click", toggleNav);
+init();
