@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+/* --------------
+      RESET 
+-------------- */
+
 html {
   font-size: 65.2%;
   font-family: "Montserrat", sans-serif;
@@ -30,6 +34,10 @@ img {
   width: 100%;
 }
 
+/* --------------
+      ROOT 
+-------------- */
+
 .orange {
   background: linear-gradient(to right, #cc7000, #FF8C00, #cc7000); 
 }
@@ -42,7 +50,13 @@ img {
   background: linear-gradient(to right, #000070, #00008B, #000070);
 }
 
-/* HEADER */
+.red {
+  background: linear-gradient(to right, #9e1227, #cd1630, #9e1227);
+}
+
+/* --------------
+    HEADER 
+-------------- */
 
 .headerContainer,
 .footerContainer {
@@ -69,10 +83,6 @@ img {
   background: none;
   border: none;
 }
-
-/* .headerContainer nav {
-  display: none;
-} */
 
 .headerContainer nav {
   position: absolute;
@@ -116,6 +126,10 @@ img {
 .headerContainer nav a:hover {
   color: #FFD700;
 }
+
+/* --------------
+      MAIN 
+-------------- */
 
 /* SLIDESHOW */
 
@@ -183,16 +197,20 @@ img {
   to {opacity: 1}
 }
 
-/* MAIN */
-
 .fiftyFiftyContainer .lime,
 .fiftyFiftyContainer .orange {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 40vh;
   padding: 3rem 2rem 2rem;
   flex: 1 50%;
+}
+
+.fiftyFiftyContainer .orange .blue,
+.fiftyFiftyContainer .lime .red {
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
 }
 
 .fiftyFiftyContainer .imageContainer {
@@ -228,6 +246,12 @@ img {
   color: #FAFAFA;
 }
 
+.fiftyFiftyContainer .orange img,
+.fiftyFiftyContainer .lime img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
 .fiftyFiftyContainer .content a {
   display: inline-table;
   width: 100%;
@@ -247,6 +271,12 @@ img {
   cursor: pointer;
 }
 
+.imageBanner img {
+  max-height: 60vh;
+  object-fit: cover;
+  object-position: 100% 100%;
+}
+
 /* INSTAGRAM CONTAINER */
 
 .instagramContainer {
@@ -259,11 +289,29 @@ img {
   padding-bottom: 2rem;
 }
 
-/* FOOTER */
+/* --------------
+      FOOTER 
+-------------- */
 
 .footerContainer {
   position: static;
+  padding: 2rem 1rem;
 }
+
+.footerContainer ul {
+  display: flex;
+  gap: 10px;
+}
+
+.footerContainer ul li a  {
+  color: #FAFAFA;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* --------------
+      MISC 
+-------------- */
 
 /* OVERLAY */
 
@@ -279,6 +327,10 @@ img {
 }
 
 @media all and (min-width: 768px) {
+
+  /* --------------
+      HEADER
+  -------------- */
 
   .headerContainer .mobile,
   .headerContainer nav .close,
@@ -310,13 +362,17 @@ img {
     margin: 0 8px;
   }
 
+  /* --------------
+      MAIN 
+  -------------- */
+
   .fiftyFiftyContainer {
     display: flex;
-    max-height: 40vh;
+    max-height: 60vh;
     overflow: hidden;
   }
 
-  .fiftyFiftyContainer img {
+  .fiftyFiftyContainer .imageContainer img {
     object-fit: cover;
   }
 
@@ -324,51 +380,73 @@ img {
     flex-direction: row-reverse;
   }
 
-  .fiftyFiftyContainer .content h2,
-  .instagramContainer h2 {
-    font-size: 5.8rem;
-  }
-
   .fiftyFiftyContainer p {
     width: 100%;
-    max-width: 500px;
+    /* max-width: 500px; */
     margin-inline: auto;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.2;
   }
 
   .fiftyFiftyContainer .content a {
     padding: 1rem 2rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
 
 @media all and (min-width: 1250px) {
-  .fiftyFiftyContainer {
-    max-height: 50vh;
+
+   /* --------------
+        HEADER
+  -------------- */
+
+  .headerContainer nav ul,
+  .footerContainer ul {
+    padding: 2rem;
+  }
+  
+  .headerContainer nav ul li {
+    margin: 10;
+  }
+  
+  .headerContainer nav a,
+  .footerContainer ul li a {
+    font-size: 2.2rem;
   }
 
-  .fiftyFiftyContainer img {
-    max-height: 50vh;
+  .footerContainer a svg {
+    width: 44px;
+    height: 44px;
   }
 
-  .fiftyFiftyContainer .content h2,
-  .instagramContainer h2 {
-    font-size: 6.8rem;
+  /* --------------
+      MAIN 
+  -------------- */
+
+  /* SLIDESHOW */
+
+  .mySlides img {
+    max-height: 100vh;
+    object-fit: cover;
+    object-position: 80% 40%;
   }
+
+  /* 50/50 Split */
 
   .fiftyFiftyContainer p {
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1.2;
   }
 
   .fiftyFiftyContainer .content a {
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
     font-size: 2rem;
   }
 }
 
-/* SHOW / HIDE */
+/* -----------
+    HIDE 
+------------*/
 
 .hide {
   display: none;
