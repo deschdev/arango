@@ -71,12 +71,8 @@ img {
   align-items: center;
   width: 100%;
   padding: 10px;
-
   background: linear-gradient(to right, #9e1227, #cd1630, #9e1227);
-}
-
-.headerContainer {
-  position: relative;
+  z-index: 10;
 }
 
 .headerContainer img {
@@ -140,6 +136,7 @@ img {
 /* Slideshow container */
 .slideshowContainer{
   position: relative;
+  margin-top: 80px;
 }
 
 .mySlides img {
@@ -225,70 +222,48 @@ img {
 
 .fiftyFiftyContainer .imageContainer {
   flex: 1 50%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 1;
+  height: 400px;
 }
 
 .fiftyFiftyContainer .imageContainer.birria {
   background-image: url("/assets/images/birria.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
 }
 
 .fiftyFiftyContainer .imageContainer.carnitas {
   background-image: url("/assets/images/carnitas.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
 }
 
 .fiftyFiftyContainer .imageContainer.toastadas {
   background-image: url("/assets/images/toastadas.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
 }
 
 .fiftyFiftyContainer .imageContainer.cheesecake {
   background-image: url("/assets/images/cheesecake.png");
+}
+
+.imageBanner {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  min-height: 300px;
 }
 
 .imageBanner.chorizo {
     background-image: url("/assets/images/chorizoHuevos.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 400px;
 }
 
 .imageBanner.cheesecake {
   background-image: url("/assets/images/cheesecake.png");
   background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 400px;
 }
-
+ 
 .imageBanner.toastadas {
   background-image: url("/assets/images/toastadas.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 400px;
-}
-
-.fiftyFiftyContainer .imageContainer img {
-  flex: 1 50%;
 }
 
 .fiftyFiftyContainer .content {
@@ -336,6 +311,7 @@ img {
   background: linear-gradient(to right, #000070, #00008B, #000070);
   border-radius: 5px;
   font-size: 1.44rem;
+  font-weight: 600;
   line-height: 1.5;
   color: #FAFAFA;
   text-transform: uppercase;
@@ -411,12 +387,6 @@ img {
     display: none;
   }
 
-  .headerContainer {
-    position: fixed;
-    top: 0;
-    z-index: 10;
-  }
-
   .headerContainer nav {
     position: initial;
     display: block;
@@ -446,7 +416,7 @@ img {
   }
 
   .fiftyFiftyContainer:not(.reverse) {
-    margin-top: 15rem;
+    margin-top: 10rem;
     margin-right: 4rem;
     border-radius: 10px;
   }
@@ -462,7 +432,7 @@ img {
 
   .fiftyFiftyContainer.reverse {
     flex-direction: row-reverse;
-    margin-right: 4rem;
+    margin-left: 4rem;
     border-radius: 10px;
   }
 
@@ -511,7 +481,7 @@ img {
   /* SLIDESHOW */
 
   .mySlides img {
-    max-height: 100vh;
+    max-height: 70vh;
     object-fit: cover;
     object-position: 80% 40%;
   }
