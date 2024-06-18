@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 ::before,
 ::after {
@@ -9,6 +11,12 @@
 /* --------------
       ROOT 
 -------------- */
+
+:root {
+  --black: #12110F;
+  --red: #FF3131;
+  --yellow: #FCDF7D;
+}
 
 .orange {
   background: linear-gradient(to right, #cc7000, #FF8C00, #cc7000); 
@@ -23,7 +31,7 @@
 }
 
 .red {
-  background: linear-gradient(to right, #9e1227, #cd1630, #9e1227);
+  background: var(--red);
 }
 
 /* --------------
@@ -32,15 +40,15 @@
 
 html {
   font-size: 65.2%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 body {
-  background: linear-gradient(to right, #000070, #00008B, #000070);
+  background: var(--yellow);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Galada", cursive;
+  font-family: "Noto Serif", serif;
 }
 
 ul {
@@ -71,7 +79,7 @@ img {
   align-items: center;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(to right, #9e1227, #cd1630, #9e1227);
+  background: var(--red);
   z-index: 10;
 }
 
@@ -90,7 +98,7 @@ img {
   right: 0;
   width: 40vw;
   height: 100vh;
-  background: linear-gradient(to bottom, #9e1227, #cd1630, #9e1227);
+  background: var(--yellow);
   z-index: 3;
 } 
 
@@ -102,7 +110,7 @@ img {
   background-color: transparent;
   font-size: 2.2rem;
   font-weight: 500;
-  color: #FAFAFA;
+  color: var(--black);
   cursor: pointer;
 }
 
@@ -120,11 +128,12 @@ img {
 .headerContainer nav a {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #FAFAFA;
+  color: var(--black);
+  font-family: "Noto Serif", serif;
 }
 
 .headerContainer nav a:hover {
-  color: #FFD700;
+  color: var(--red);
 }
 
 /* --------------
@@ -279,7 +288,6 @@ img {
   font-size: 4.8rem;
   font-weight: 900;
   color: #FAFAFA;
-  text-shadow: 2px 2px #cd1630;
 }
 
 .fiftyFiftyContainer .content h2 {
