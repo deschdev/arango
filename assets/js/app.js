@@ -6,4 +6,4 @@ const init = () => {
   showSlides();
 }
 
-init();
+init(); 

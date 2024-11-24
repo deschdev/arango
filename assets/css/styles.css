@@ -81,6 +81,7 @@ img {
   height: 100vh;
   background: var(--yellow);
   z-index: 3;
+  transition: 0.9s ease, 0.9s ease;
 } 
 
 .headerContainer nav .close {
@@ -114,8 +115,13 @@ img {
   font-family: "Noto Serif", serif;
 }
 
+.headerContainer nav a {
+  transition: 0.9s ease, 0.9s ease;
+}
+
 .headerContainer nav a:hover {
   border-bottom: 4px dotted var(--red);
+  transition: 0.9s ease, 0.9s ease;
 }
 
 .slideshowContainer{
@@ -125,9 +131,7 @@ img {
 }
 
 .mySlides img {
-  max-height: 50vh;
   object-fit: cover;
-  object-position: 80% 20%;
 }
 
 .text {
@@ -150,7 +154,7 @@ img {
 
 .dotContainer {
   position: absolute;
-  bottom: 0px;
+  bottom: -12px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -167,7 +171,7 @@ img {
 }
 
 .active {
-  background: #711414;;
+  background: var(--black);
 }
 
 .fade {
@@ -213,9 +217,9 @@ img {
   background-image: url("/assets/images/toastadas.png");
 }
 
-.fiftyFiftyContainer .imageContainer.cheesecake {
-  background-image: url("/assets/images/cheesecake.png");
-  background-position: bottom;
+.fiftyFiftyContainer .imageContainer.cake {
+  background-image: url("/assets/images/churros.png");
+  background-position: center;
 }
 
 .imageBanner {
@@ -291,20 +295,27 @@ img {
   max-width: 185px;
   height: 2rem;
   margin: 0 auto;
-  padding: 1rem 2rem;
-  background: transparent;
+  padding: 1.6rem 4rem;
+  background: var(--red);
   border-left: none;
   border-right: none;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 1.44rem;
   font-weight: 600;
   line-height: 1.5;
-  color: var(--black);
+  color: #FAFAFA;
   text-transform: uppercase;
   letter-spacing: 1px;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
+  transition: 0.9s ease, 0.9s ease;
+}
+
+.fiftyFiftyContainer .content p + a:hover {
+  background: var(--black);
+  color: #FAFAFA;
+  transition: 0.9s ease, 0.9s ease;
 }
 
 .instagramContainer {
@@ -325,13 +336,16 @@ img {
 .footerContainer ul {
   display: flex;
   gap: 10px;
+  margin: auto;
 }
 
-.footerContainer ul li a  {
-  font-family: "";
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--black);
+.footerContainer ul a svg {
+  transition: 0.9s ease, 0.9s ease;
+}
+
+.footerContainer ul a svg:hover {
+  fill: var(--black);
+  transition: 0.9s ease, 0.9s ease;
 }
 
 .footerContainer img {
@@ -383,6 +397,7 @@ img {
   .fiftyFiftyContainer {
     display: flex;
     max-height: 60vh;
+    margin-block: 30px;
     overflow: hidden;
   }
 
@@ -403,7 +418,12 @@ img {
   }
 
   .fiftyFiftyContainer .content a {
-    font-size: 1.4rem;
+    transition: 0.9s ease, 0.9s ease;
+  }
+
+  .fiftyFiftyContainer .content a:hover {
+    color: var(--red);
+    transition: 0.9s ease, 0.9s ease;
   }
 }
 
@@ -428,12 +448,6 @@ img {
     height: 44px;
   }
 
-  .mySlides img {
-    max-height: 70vh;
-    object-fit: cover;
-    object-position: 80% 40%;
-  }
-
   .fiftyFiftyContainer p {
     font-size: 2rem;
     line-height: 1.2;
@@ -442,4 +456,149 @@ img {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .fiftyFiftyContainer .content {
+    margin: 2rem 0;
+  }
+}
+
+/* 
+ CAKE HTML
+*/
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px;
+}
+
+.column {
+  flex: 20%;
+  max-width: 25%;
+  padding: 5px 8px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.section_all.cakes {
+  min-height: initial;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+  .column {
+    flex: 40%;
+    flex-wrap: wrap;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 50%;
+    max-width: 100%;
+  }
+}
+
+/* ABOUT */
+
+.section_all {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.section_title_all {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.section_title_all h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section_subtitle {
+  line-height: 1.5;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.vertical_content_manage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.col-lg-6 {
+  width: 50%;
+  padding: 15px;
+}
+
+.about_header_main {
+  margin-top: 30px;
+}
+
+.about_icon_box p.text_custom {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.about_heading {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.about_content_box_all {
+  padding: 28px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.about_detail {
+  padding: 20px;
+  text-align: center;
+}
+
+.about_icon {
+  height: 65px;
+  width: 65px;
+  line-height: 65px;
+  display: inline-block;
+  border-radius: 35px;
+  box-shadow: 0 8px 20px -2px rgba(158, 152, 153, 0.5);
+}
+
+.about_detail h5 {
+  font-weight: 700;
+  margin-top: 1.5rem;
+  text-transform: capitalize;
+  color: var(--black);
+}
+
+.edu_desc {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.row.list-container {
+  display: flex;
+  justify-content: center;
 }
