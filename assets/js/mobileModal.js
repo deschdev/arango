@@ -10,7 +10,6 @@ export const mobileModal = () => {
   }
 
   const closeMobileNav = () => {
-    nav.classList.add("hide");
     overlay.classList.add("hide");
   }
 
