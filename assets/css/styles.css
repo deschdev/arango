@@ -64,7 +64,7 @@
   /*
   11. Lists
   */
-  [role="list"] {
+  [role="list"], ul {
     list-style: none;
     padding: 0;
   }
@@ -244,6 +244,10 @@
     display: grid;
     gap: var(--equal-columns-gap, 1rem);
     align-items: var(--equal-columns-vertical-alignment, stretch);
+
+    img {
+      object-fit: cover;
+    }
   
     @media (width > 760px) {
       grid-auto-flow: column;
@@ -257,6 +261,10 @@
     &[data-alignment="centered"] {
       --equal-columns-vertical-alignment: center;
     }
+  }
+
+  .paragraph-margin {
+    margin-block: 2rem;
   }
 }
 
@@ -276,30 +284,36 @@
   }
 
   [aria-controls="primary-nav"] {
-    z-index: 11;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
+    display: none;
 
-    img {
-      border-radius: 0;
+    @media (width < 760px) {
+      display: block;
+      z-index: 11;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+
+      img {
+        border-radius: 0;
+      }
     }
   }
-
+  /* close mobile navigation button */
   .close {
     display: none;
 
     @media (width < 760px) {
       display: block;
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 7px;
+      right: 7px;
       background: none;
       border: 0;
       color: var(--white);
     }
   }
-
+  
+  /* navigation */
   .primary-navigation {
     ul {
       display: flex;
@@ -338,7 +352,6 @@
 
   .slideshow-wrapper {
     max-width: 100%;
-    margin: 70px auto 0;
     text-align: center;
 
     .slideshow {
@@ -373,6 +386,7 @@
     to { opacity: 1; }
   }
 
+  /* slideshow controls */
   .controls {
     display: flex;
     justify-content: center;
@@ -435,18 +449,21 @@
     display: inline-flex;
     padding: .5rem 1rem;
     border-radius: var(--br-2);
+    color: var(--white);
+    border: 2px solid transparent;
     background-color: var(--red);
+    transition: background-color 0.4s;
     font-family: var(--ff-heading);
     font-size: var(--fs-medium);
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.4s;
   }
 
   .button:hover,
   .button:focus-visible {
-    color: var(--text-high-contrast);
-    background-color: var(--bg-accent-light);
+    border: 2px solid var(--red);
+    background-color: transparent;
+    color: var(--black);
   }
 }
 
@@ -459,6 +476,12 @@
     clip-path: inset(50%);
     overflow: hidden;
     white-space: nowrap;
+  }
+
+  /* background colors */
+
+  .background-accent-main {
+    background-color: var(--red);
   }
 
   /* text alignment */
@@ -511,6 +534,11 @@
 
  .border-radius-large {
   border-radius: var(--br-3);
+ }
+
+ .white-heading {
+  color: var(--white);
+  margin-bottom: 1rem;
  }
 }
 
