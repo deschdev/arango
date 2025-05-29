@@ -264,7 +264,12 @@
   }
 
   .paragraph-margin {
-    margin-block: 2rem;
+    margin-block: 1.4rem;
+  }
+
+  .paragraph-flex {
+    display: flex;
+    gap: 1.6rem;
   }
 }
 
@@ -358,7 +363,6 @@
       position: relative;
       width: 100%;
       overflow: hidden;
-      border-radius: 12px;
       aspect-ratio: 16 / 9;
 
       .slide {
